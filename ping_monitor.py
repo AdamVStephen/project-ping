@@ -1,4 +1,4 @@
-#!/work/astephen/venvs/ping/bin/python3
+#!/usr/bin/env python3
 
 from ping3 import ping
 import socket
@@ -16,6 +16,7 @@ def main():
                 fh.write("%s,%s\n" % (t, _t))
             else:
                 fh.write("%s,%s\n" % (t, "-1"))
+            fh.flush()
 
 if __name__ == '__main__':
     main()
